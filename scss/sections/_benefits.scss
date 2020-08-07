@@ -1,0 +1,153 @@
+.benefits {
+  background: #F7F7F7;
+  padding-top: 80px;
+}
+
+.benefit-row {
+  height: 370px;
+  display: flex;
+  justify-content: space-between;
+  background: #FFFFFF;
+  border: 1px solid #E8E9ED;
+  border-radius: 5px;
+  margin-top: 40px;
+  padding: 30px 0;
+}
+
+.benefit-box {
+  width: 1120px;
+}
+
+.benefit-box-one-texts {
+  max-width: 40%;
+  margin-left: 35px;
+}
+
+.benefit-title {
+  font-family:$raleway;
+  font-size: 36px;
+  font-weight: 400;
+  margin-top: 65px;
+}
+
+.benefit-text {
+  font-family:$opensSans;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 30px;
+}
+
+.benefit-line-one {
+  @include benefitLine;
+  background:$acentColor1;
+
+}
+
+.benefit-line-two {
+  @include benefitLine;
+  background:$mainColor;
+
+}
+
+.benefit-line-three {
+  @include benefitLine;
+  background:$acentColor2;
+
+}
+
+.benefit-box-one-img {
+  position: relative;
+  margin-right: 120px;
+}
+
+.benefit-picture {
+  width: 380px;
+  height: 100%;
+  background: url("../assets/Macbook.png");
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 10;
+}
+
+.benefit-square {
+  width: 180px;
+  height: 180px;
+  border-radius: 41px;
+  background:$acentColor1;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 15%;
+  left: 55%;
+  z-index: 0;
+}
+
+
+.benefit-box-two-img {
+  position: relative;
+  margin-left: 70px;
+}
+
+.benefit-picture_2 {
+  width: 420px;
+  height: 320px;
+  background: url("../assets/iPhone.png");
+  background-size: cover;
+  position: relative;
+  z-index: 100;
+}
+
+.benefit-circle {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background:$mainColor;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.benefit-box-two-texts {
+  max-width: 40%;
+  margin-right: 20px;
+}
+
+.benefit-title-place {
+  max-width: 60%;
+}
+
+
+.benefit-box-three {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding-bottom: 100px;
+}
+
+
+.benefit-box-three-picture {
+  width: 440px;
+  height: 370px;
+  background: $acentColor2 url("../assets/Trumpet.png");
+  background-size: 70%;
+  background-position: 50% 70%;
+  background-repeat: no-repeat;
+  margin-left: 40px;
+  border: 1px solid #E8E9ED;
+  border-radius: 5px;
+}
+
+.benefit-box-three-texts {
+  background: #FFFFFF;
+  max-width: 620px;
+  border: 1px solid #E8E9ED;
+  border-radius: 5px;
+  padding-left: 30px;
+  padding-top: 20px;
+}
+
+.benefit-title-set {
+  max-width: 60%;
+}
+
