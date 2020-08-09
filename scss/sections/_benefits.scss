@@ -15,7 +15,7 @@
 }
 
 .benefit-box {
-  width: 1120px;
+  width: 85%;
 }
 
 .benefit-box-one-texts {
@@ -127,7 +127,7 @@
 
 
 .benefit-box-three-picture {
-  width: 440px;
+  width: 40%;
   height: 370px;
   background: $acentColor2 url("../assets/Trumpet.png");
   background-size: 70%;
@@ -140,7 +140,7 @@
 
 .benefit-box-three-texts {
   background: #FFFFFF;
-  max-width: 620px;
+  max-width: 60%;
   border: 1px solid #E8E9ED;
   border-radius: 5px;
   padding-left: 30px;
@@ -150,4 +150,105 @@
 .benefit-title-set {
   max-width: 60%;
 }
+
+
+
+@media (max-width: 1000px) {
+  .benefit-box {
+    width: 100%;
+  }
+}
+
+@media (max-width: 850px) {
+  .benefit-line-one,
+  .benefit-line-two,
+  .benefit-line-three {
+    display: none;
+  }
+}
+
+@media (max-width: 805px) {
+  .benefit-title-place {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 755px) {
+  .benefits {
+    padding-top: 40px;
+  }
+
+  .benefit-row {
+    height: 700px;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 40px;
+    padding: 10px 0;
+  }
+
+  .benefit-box-one-img {
+    margin: 0 auto;
+
+  }
+
+  .benefit-picture {
+    height: 350px;
+  }
+
+  .benefit-square {
+    top: 22%;
+    left: 55%;
+  }
+
+  .benefit-box-one {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .benefit-box-one-texts {
+    max-width: 90%;
+  }
+
+  .benefit-box-two {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .benefit-box-two-texts {
+    max-width: 90%;
+    margin-left: 40px;
+
+  }
+  .benefit-title-place {
+    margin-top: 70px;
+    max-width: 80%;
+  }
+
+  .benefit-title-set {
+    max-width: 80%;
+  }
+
+  .benefit-box-three {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 80px;
+  }
+
+  .benefit-box-three-texts {
+    max-width: 100%;
+    margin-bottom: 40px;
+    padding-bottom: 70px;
+  }
+
+  .benefit-box-three-picture {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .benefit-text{
+    margin-right: 20px;
+  }
+}
+
+
 

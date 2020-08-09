@@ -1,3 +1,4 @@
+
 .header {
   width: 100%;
   height: 70px;
@@ -17,6 +18,23 @@
 }
 
 .page-menu-logo {
+}
+
+.button-burger{
+  width: 30px;
+  height: 4px;
+  background:$mainColor;
+  margin: 2px;
+}
+
+.menu-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: none;
+  border: 0;
+  display: none;
 }
 
 .logo-link {
@@ -58,5 +76,62 @@
 .page-menu-link:hover {
   border-bottom: 4px solid #08A6E4;
   color: #000000;
+}
+
+@media (max-width: 880px) {
+  .page-menu-el {
+    padding: 0 25px;
+  }
+  .logo-text {
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .menu-button {
+    display: flex;
+  }
+
+  .page-menu-list {
+    position: fixed;
+    right: 0;
+    top:72px;
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    margin: 0;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    transition: 1s;
+    height: 1px;
+    border: 1px solid $mainColor;
+    overflow: hidden;
+  }
+
+  .page-menu-list.show {
+    top: 72px;
+    height: 210px;
+    padding: 40px 10px 10px;
+  }
+
+
+  .page-menu-link:hover {
+    border-bottom: transparent;
+    color: $mainColor;
+    opacity: 0.7;
+  }
+
+  .page-menu-link {
+    font-size: 15px;
+    display: inline-block;
+    padding: 8px 0;
+  }
+
+  .page-menu-el {
+    width: 50%;
+    text-align: center;
+  }
 
 }

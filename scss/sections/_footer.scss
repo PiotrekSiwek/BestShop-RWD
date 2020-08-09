@@ -3,7 +3,6 @@
   justify-content: space-between;
   background: #F7F7F7;
   box-shadow: 0 -5px 40px #00000029;
-  width: 100%;
   padding-bottom: 15px;
 }
 
@@ -31,4 +30,14 @@
   align-items: center;
   margin-top: 15px;
   margin-right: 100px;
+}
+
+@media (max-width: 850px) {
+  .footer-text {
+    margin-left: 10px;
+  }
+
+  .footer-icons {
+    margin-right: 50px;
+  }
 }

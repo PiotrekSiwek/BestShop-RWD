@@ -3,7 +3,7 @@
 }
 
 .statistics-box {
-  width: 1000px;
+  width: 80%;
 }
 
 .statistics-title {
@@ -82,4 +82,22 @@
   text-align: center;
   max-width: 120px;
   cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .row {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+
+  .column {
+    margin-bottom: 50px;
+  }
+
+  .statistics-title {
+    margin-top: 80px;
+    margin-bottom: 40px;
+  }
+
 }

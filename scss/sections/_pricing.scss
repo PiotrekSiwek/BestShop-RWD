@@ -2,7 +2,7 @@
 }
 
 .pricing-box {
-  width: 1250px;
+  width: 90%;
 }
 
 .pricing-title {
@@ -28,6 +28,7 @@
   border-radius: 18px;
   text-align: center;
   position: relative;
+  margin: 0 10px;
 }
 
 .offer-title {
@@ -100,6 +101,7 @@
   box-shadow: 5px 10px 27px #07ACE629;
   text-align: center;
   position: relative;
+  margin: 0 10px;
 }
 
 .price-color-profession {
@@ -142,6 +144,7 @@
   border-radius: 18px;
   text-align: center;
   position: relative;
+  margin: 0 10px;
 }
 
 .price-color-premium {
@@ -164,4 +167,81 @@
 
 .premium-btn {
   background: $acentColor2;
+}
+
+@media (max-width: 755px) {
+  .pricing-offer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 90px;
+  }
+
+  .pricing-offer-basic,
+  .pricing-offer-premium{
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 200px;
+    width: 100%;
+  }
+
+  .pricing-offer-profession{
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 250px;
+    width: 100%;
+    min-width: 370px;
+  }
+
+  .items-list-basic,
+  .items-list-premium{
+    grid-column: 2 / 3;
+    grid-row: 1 / 4 ;
+    margin-top: 20px;
+    text-align: left;
+  }
+
+  .items-list-profession {
+    grid-column: 2 / 3;
+    grid-row: 1 / 4 ;
+    margin-top: 40px;
+    text-align: left;
+  }
+
+  .price-color-basic,
+  .price-color-premium{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3 ;
+    padding-bottom: 20px;
+  }
+
+  .price-color-profession {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    padding-bottom: 30px;
+  }
+
+  .price-subtitle-profession{
+    display: inline-block;
+    padding-bottom: 40px;
+
+  }
+
+  .price-subtitle-premium,
+  .price-subtitle-profession{
+    margin-top: 90px;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .offer-title{
+    grid-column: 1 / 2;
+    grid-row: 1 / 3 ;
+    padding-top: 20px;
+  }
 }
