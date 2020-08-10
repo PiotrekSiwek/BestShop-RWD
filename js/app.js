@@ -3,4 +3,5 @@ const menu = document.querySelector(".page-menu-list");
 
 btn.addEventListener("click", function (){
     menu.classList.toggle("show");
+    btn.classList.toggle("show");
 })
