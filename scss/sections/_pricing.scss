@@ -1,3 +1,7 @@
+@import "scss/settings/fonts";
+@import "scss/settings/colors";
+
+
 .pricing {
 }
 
@@ -18,7 +22,7 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 50px;
-  margin-bottom: 180px;
+  margin-bottom: 140px;
 }
 
 .pricing-offer-basic {

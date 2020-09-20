@@ -1,5 +1,9 @@
+@import "scss/settings/fonts";
+@import "scss/settings/colors";
+@import "scss/settings/mixins";
+
 .benefits {
-  background: #F7F7F7;
+  background: #f7f7f7;
   padding-top: 80px;
 }
 
@@ -63,10 +67,8 @@
 .benefit-picture {
   width: 380px;
   height: 100%;
-  background: url("../assets/Macbook.png");
+  background: url("../assets/Macbook.png") no-repeat bottom;
   background-size: contain;
-  background-position: bottom;
-  background-repeat: no-repeat;
   position: relative;
   z-index: 10;
 }
@@ -129,10 +131,8 @@
 .benefit-box-three-picture {
   width: 40%;
   height: 370px;
-  background: $acentColor2 url("../assets/Trumpet.png");
+  background: $acentColor2 url("../assets/Trumpet.png") no-repeat 50% 70%;
   background-size: 70%;
-  background-position: 50% 70%;
-  background-repeat: no-repeat;
   margin-left: 40px;
   border: 1px solid #E8E9ED;
   border-radius: 5px;

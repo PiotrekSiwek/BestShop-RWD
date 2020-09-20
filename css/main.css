@@ -297,7 +297,7 @@ input {
 
 /**
  * Address inconsistent `text-transform` inheritance for `button` and `select`.
- * All other form control elements do not inherit `text-transform` values.
+ * All other form control sections do not inherit `text-transform` values.
  * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
  * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
@@ -328,7 +328,7 @@ input[type=submit] {
 }
 
 /**
- * Re-set default cursor for disabled elements.
+ * Re-set default cursor for disabled sections.
  */
 button[disabled],
 html input[disabled] {
@@ -479,6 +479,16 @@ textarea {
   height: 4px;
   background: #08A6E4;
   margin: 2px;
+  transition: 1s;
+}
+.button-burger:nth-of-type(1) {
+  transform: translate(0%, 0%) rotate(0deg);
+}
+.button-burger:nth-of-type(2) {
+  transform: rotate(0deg);
+}
+.button-burger:nth-of-type(3) {
+  transform: translate(0%, 0%) rotate(0deg);
 }
 
 .menu-button {
@@ -528,7 +538,7 @@ textarea {
   color: #000000;
 }
 
-@media (max-width: 880px) {
+@media (max-width: 1050px) {
   .page-menu-el {
     padding: 0 25px;
   }
@@ -537,7 +547,7 @@ textarea {
     margin-left: 15px;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 750px) {
   .menu-button {
     display: flex;
   }
@@ -570,6 +580,7 @@ textarea {
     height: 1px;
     border: 1px solid #08A6E4;
     overflow: hidden;
+    text-decoration: underline;
   }
 
   .page-menu-list.show {
@@ -587,7 +598,10 @@ textarea {
   .page-menu-link {
     font-size: 15px;
     display: inline-block;
-    padding: 8px 0;
+    padding: 8px 4px;
+    border: 2px solid #08A6E4;
+    border-radius: 5px;
+    width: 120px;
   }
 
   .page-menu-el {
@@ -617,7 +631,7 @@ textarea {
 
 .banner-link {
   display: inline-block;
-  padding: 22px 155px;
+  padding: 22px 80px;
   border-radius: 40px;
   background: #08A6E4;
   color: #FFFFFF;
@@ -630,14 +644,19 @@ textarea {
 
 .banner-logo {
   width: 100%;
-  height: 300px;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-@media (max-width: 1100px) {
+@media (min-width: 1200px) {
   .banner-link {
-    padding: 22px 80px;
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 1050px) {
+  .banner-logo {
+    height: 300px;
   }
 }
 .statistics-box {
@@ -738,7 +757,7 @@ textarea {
   }
 }
 .benefits {
-  background: #F7F7F7;
+  background: #f7f7f7;
   padding-top: 80px;
 }
 
@@ -805,10 +824,8 @@ textarea {
 .benefit-picture {
   width: 380px;
   height: 100%;
-  background: url("../assets/Macbook.png");
+  background: url("../assets/Macbook.png") no-repeat bottom;
   background-size: contain;
-  background-position: bottom;
-  background-repeat: no-repeat;
   position: relative;
   z-index: 10;
 }
@@ -868,10 +885,8 @@ textarea {
 .benefit-box-three-picture {
   width: 40%;
   height: 370px;
-  background: #55DFB4 url("../assets/Trumpet.png");
+  background: #55DFB4 url("../assets/Trumpet.png") no-repeat 50% 70%;
   background-size: 70%;
-  background-position: 50% 70%;
-  background-repeat: no-repeat;
   margin-left: 40px;
   border: 1px solid #E8E9ED;
   border-radius: 5px;
@@ -999,7 +1014,7 @@ textarea {
   justify-content: space-between;
   align-items: center;
   margin-top: 50px;
-  margin-bottom: 180px;
+  margin-bottom: 140px;
 }
 
 .pricing-offer-basic {
@@ -1224,6 +1239,10 @@ textarea {
     padding-top: 20px;
   }
 }
+.contact {
+  padding-top: 100px;
+}
+
 .contact-box {
   display: flex;
   width: 80%;
@@ -1343,6 +1362,11 @@ input[type=checkbox] {
   border: 1px solid #95989A;
   flex-shrink: 0;
   margin-right: 15px;
+  background: white;
+}
+input[type=checkbox]:checked {
+  background: white;
+  color: black;
 }
 
 input[type=checkbox]:checked {
@@ -1433,6 +1457,244 @@ input[type=checkbox]:checked {
 
   .footer-icons {
     margin-right: 50px;
+  }
+}
+#calculator {
+  background: #F7F7F7;
+  padding: 80px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.calculator-title {
+  font-family: "Raleway", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.form-list-box {
+  display: flex;
+  justify-content: center;
+}
+.form-list-box .calculator-form {
+  margin-right: 30px;
+  width: 35%;
+}
+.form-list-box .calculator-summary {
+  margin-left: 30px;
+  width: 35%;
+}
+
+.warning {
+  position: relative;
+}
+.warning::after {
+  content: "(max 3 numbers!)";
+  width: 150px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 15px;
+  color: #A5A5A5;
+  font-family: "Open Sans", sans-serif;
+  border-radius: 5px;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  visibility: visible;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  border: #08A6E4 2px solid;
+}
+.form-input::-moz-placeholder {
+  color: #A5A5A5;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+}
+.form-input:-ms-input-placeholder {
+  color: #A5A5A5;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+}
+.form-input::-ms-input-placeholder {
+  color: #A5A5A5;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+}
+.form-input::placeholder {
+  color: #A5A5A5;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+}
+
+.calculator-select {
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  border: #08A6E4 2px solid;
+  background: white;
+  position: relative;
+}
+
+.select-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #A5A5A5;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.fa-arrow-alt-circle-down {
+  color: #08A6E4;
+  font-size: 20px;
+  margin-left: 62%;
+}
+
+.fa-arrow-alt-circle-down.show {
+  transform: rotate(180deg);
+}
+
+.select-dropdown {
+  display: block;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  border: #FB3B64 2px solid;
+  padding: 10px 15px;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  cursor: pointer;
+  left: -2px;
+  top: 55px;
+  visibility: hidden;
+}
+.select-dropdown .select-list {
+  padding: 10px;
+}
+.select-dropdown .select-list:hover {
+  transform: translate(10px) scale(1.07);
+}
+
+.select-dropdown.show {
+  visibility: visible;
+}
+.calculator-checkbox {
+  display: flex;
+  align-items: center;
+  color: #A5A5A5;
+  font-family: "Raleway", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#first-checkbox {
+  margin-bottom: 20px;
+  margin-top: 25px;
+}
+
+label[for=rental],
+label[for=account] {
+  margin-left: 20px;
+}
+
+.checkbox-color {
+  background: white;
+  width: 23px;
+  height: 23px;
+  border-radius: 4px;
+}
+
+input[type=checkbox] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+}
+
+.list-item {
+  background: #55DFB4;
+  border-radius: 6px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  margin-bottom: 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 10px 15px;
+  visibility: hidden;
+}
+
+.display {
+  visibility: visible;
+}
+
+.item-price {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+#total-price {
+  width: 50%;
+  border-radius: 6px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #08A6E4;
+  padding: 10px 15px;
+  color: white;
+  margin-left: 50%;
+}
+
+.total-price {
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+@media (max-width: 1000px) {
+  #calculator {
+    padding: 80px 0;
+  }
+}
+@media (max-width: 750px) {
+  .form-list-box {
+    flex-direction: column;
+    align-items: center;
+  }
+  .form-list-box .calculator-form {
+    width: 100%;
+    margin-bottom: 40px;
+    margin-right: 0;
+  }
+  .form-list-box .calculator-summary {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  #calculator {
+    padding: 80px;
+  }
+}
+@media (max-width: 500px) {
+  #calculator {
+    padding: 80px 0;
   }
 }
 /*# sourceMappingURL=main.css.map */

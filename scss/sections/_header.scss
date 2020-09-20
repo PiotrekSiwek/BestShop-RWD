@@ -1,3 +1,6 @@
+@import "scss/settings/fonts";
+@import "scss/settings/colors";
+
 
 .header {
   width: 100%;
@@ -25,6 +28,17 @@
   height: 4px;
   background:$mainColor;
   margin: 2px;
+  transition: 1s;
+
+  &:nth-of-type(1){
+    transform: translate(0%, 0%) rotate(0deg);
+  }
+  &:nth-of-type(2){
+    transform: rotate(0deg);
+  }
+  &:nth-of-type(3){
+    transform: translate(0%, 0%) rotate(0deg);
+  }
 }
 
 .menu-button{
@@ -77,7 +91,7 @@
   color: #000000;
 }
 
-@media (max-width: 880px) {
+@media (max-width: 1050px) {
   .page-menu-el {
     padding: 0 25px;
   }
@@ -86,7 +100,7 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 750px) {
 
   .menu-button {
     display: flex;
@@ -96,7 +110,7 @@
     .button-burger{
       transition: 1s;
       &:nth-of-type(1){
-        transform:translate(0%, 200%) rotate(-45deg);
+        transform: translate(0%, 200%) rotate(-45deg);
       }
       &:nth-of-type(2){
         transform: rotate(-45deg);
@@ -122,6 +136,7 @@
     height: 1px;
     border: 1px solid $mainColor;
     overflow: hidden;
+    text-decoration: underline;
   }
 
   .page-menu-list.show {
@@ -140,7 +155,10 @@
   .page-menu-link {
     font-size: 15px;
     display: inline-block;
-    padding: 8px 0;
+    padding: 8px 4px;
+    border: 2px solid $mainColor;
+    border-radius: 5px;
+    width: 120px;
   }
 
   .page-menu-el {

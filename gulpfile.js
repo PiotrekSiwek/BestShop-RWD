@@ -45,6 +45,7 @@ function makeCss() {
 function watch(cb) {
     gulp.watch("./scss/**/*.scss", gulp.series(makeCss));
     gulp.watch("./*.html").on('change', browserSync.reload);
+    gulp.watch("./js/*.js").on('change', browserSync.reload);
     cb();
 }
 

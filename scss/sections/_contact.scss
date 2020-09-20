@@ -1,4 +1,8 @@
+@import "scss/settings/fonts";
+@import "scss/settings/colors";
+
 .contact {
+  padding-top: 100px;
 }
 
 .contact-box {
@@ -120,6 +124,12 @@ input[type="checkbox"] {
   border: 1px solid #95989A;
   flex-shrink: 0;
   margin-right: 15px;
+  background: white;
+
+  &:checked{
+    background: white;
+    color: black;
+  }
 }
 
 input[type="checkbox"]:checked {

@@ -6,11 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>BestShop.pl</title>
-
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Raleway:wght@300;400;700;800&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
-
+    <script src="https://kit.fontawesome.com/de5f29758e.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -38,6 +37,9 @@
                     <a href="#pricing-section" class="page-menu-link">prices</a>
                 </li>
                 <li class="page-menu-el">
+                    <a href="#calculator" class="page-menu-link">calculator</a>
+                </li>
+                <li class="page-menu-el">
                     <a href="#contact-section" class="page-menu-link">contact</a>
                 </li>
             </ul>
@@ -61,9 +63,9 @@
         </div>
     </section>
 
-    <section class="statistics" id="statistics-section" >
+    <section class="statistics" id="statistics-section">
         <div class="container statistics-box">
-            <h2 class="statistics-title" >
+            <h2 class="statistics-title">
                 The most popular sales platform in country
             </h2>
             <div class="row">
@@ -94,7 +96,8 @@
                         Be always first
                     </h2>
                     <p class="benefit-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
                         et dolore magna aliqua. Ut enim ad minim veniam.
                     </p>
                     <div class="benefit-line-one"></div>
@@ -114,7 +117,8 @@
                         Your shop is where you are!
                     </h2>
                     <p class="benefit-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
                         et dolore magna aliqua. Ut enim ad minim veniam.
                     </p>
                     <div class="benefit-line-two"></div>
@@ -198,6 +202,84 @@
         </div>
     </section>
 
+    <section class="calculator" id="calculator">
+        <div class="container calculator-box">
+            <h2 class="calculator-title">
+                Calculate how much you'll pay
+            </h2>
+            <div class="form-list-box">
+                <form class="calculator-form">
+                    <div class="calculator-input">
+                        <label for="products"></label>
+                        <input type="number" class="form-input" id="products" placeholder="Products quantity" min="1" max="10"
+                               step="1">
+                    </div>
+                    <div class="calculator-input">
+                        <label for="orders"></label>
+                        <input type="number" class="form-input" id="orders" placeholder="Estimated orders in month"
+                               min="1" step="1" maxlength="3">
+                    </div>
+                    <div class="calculator-select">
+                        <div class="select-input">
+                            Choose package
+                            <i class="far fa-arrow-alt-circle-down"></i>
+                        </div>
+                        <ul class="select-dropdown">
+                            <li class="select-list" data-value="basic">Basic</li>
+                            <li class="select-list" data-value="professional">Professional</li>
+                            <li class="select-list" data-value="premium">Premium</li>
+                        </ul>
+                    </div>
+                    <div class="calculator-checkbox" id="first-checkbox">
+                        <div class="checkbox-color">
+                            <input type="checkbox" class="account" id="account" data-id="3">
+                        </div>
+                        <label for="account">Accounting</label>
+                    </div>
+                    <div class="calculator-checkbox">
+                        <div class="checkbox-color">
+                            <input type="checkbox" class="account" id="rental"data-id="4">
+                        </div>
+                        <label for="rental">Rental of a payment terminal</label>
+                    </div>
+                </form>
+                <div class="calculator-summary">
+                    <ul>
+                        <li class="list-item" data-id="products">
+                            <span class="item-type">Products</span>
+                            <span class="item-calc"></span>
+                            <span class="item-price"></span>
+                        </li>
+                        <li class="list-item" data-id="orders">
+                            <span class="item-type">Orders</span>
+                            <span class="item-calc"></span>
+                            <span class="item-price"></span>
+                        </li>
+                        <li class="list-item" data-id="package">
+                            <span class="item-type">Package</span>
+                            <span class="item-calc"></span>
+                            <span class="item-price"></span>
+                        </li>
+                        <li class="list-item" data-id="accounting">
+                            <span class="item-type">Accounting</span>
+                            <span class="item-price"></span>
+                        </li>
+                        <li class="list-item" data-id="terminal">
+                            <span class="item-type">Terminal</span>
+                            <span class="item-price"></span>
+                        </li>
+                    </ul>
+                    <div class="summary-total" id="total-price">
+                        <span>Total</span>
+                        <span class="total-price">$0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
     <section class="contact" id="contact-section">
         <div class="container contact-box">
             <div class="contact-data">
@@ -228,9 +310,12 @@
                 <div class="form-accept">
                     <input type="checkbox" class="accept" id="accept">
                     <label for="accept">I hereby give consent for my personal data included in my application to be
-                        processed for the purposes of the recruitment process under the European Parliament’s and Council of
-                        the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard
-                        to the processing of personal data and on the free movement of such data, and repealing Directive
+                        processed for the purposes of the recruitment process under the European Parliament’s and
+                        Council of
+                        the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with
+                        regard
+                        to the processing of personal data and on the free movement of such data, and repealing
+                        Directive
                         95/46/EC (Data Protection Directive)</label>
                 </div>
                 <div class="form-button">
@@ -265,6 +350,7 @@
         </div>
     </footer>
 </div>
+
 </body>
 <script src="js/app.js" defer></script>
 </html>
