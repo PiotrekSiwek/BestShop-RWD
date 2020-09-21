@@ -67,9 +67,9 @@ $inputs.forEach(function (input, index) {
             $itemPrice[index].innerText = "$" + multiply;
             array[index] = multiply;
             summary();
-        } else {
-            $warn[index].classList.add("warning")
-
+        } else if (inputNumber.length >= 4) {
+            input.value = input.value.substr(0,3);
+            $warn[index].classList.add("warning");
         }
     });
 });
