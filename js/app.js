@@ -49,6 +49,13 @@ const price = {
 
 const array = [];
 
+function summary () {
+    let result = array.reduce(function (a, b) {
+        return a + b;
+    });
+    $totalPrice.innerText = "$" + result;
+}
+
 $inputs.forEach(function (input, index) {
     input.addEventListener("keyup", function (e) {
         const inputNumber = input.value;
@@ -59,15 +66,11 @@ $inputs.forEach(function (input, index) {
             $itemList[index].innerText = inputNumber + " * " + "$" + productPrice;
             $itemPrice[index].innerText = "$" + multiply;
             array[index] = multiply;
-            let result = array.reduce(function (a, b) {
-                return a + b;
-            });
-            $totalPrice.innerText = "$" + result;
+            summary();
         } else {
             $warn[index].classList.add("warning")
 
         }
-
     });
 });
 
@@ -80,11 +83,7 @@ $dropDownList.forEach(function (li) {
         const productPrice = price.package[li.dataset.value];
         $itemPrice[2].innerText = "$" + productPrice;
         array[2] = productPrice;
-        let result = array.reduce(function (a, b) {
-            return a + b;
-        });
-        $totalPrice.innerText = "$" + result;
-
+        summary();
     });
 });
 
@@ -103,20 +102,7 @@ $checkbox.forEach(function (box) {
         else {
             $inputList[box.dataset.id].classList.remove("display");
             array[box.dataset.id] = 0;
-            let result = array.reduce(function (a, b) {
-                return a + b;
-            });
-            $totalPrice.innerText = "$" + result;
+            summary();
         }
     });
 });
-
-function summary () {
-    array.reduce(function (a, b) {
-        return   a + b;
-        // $totalPrice.innerText = "$" + result;
-    },0);
-}
-
-
-
